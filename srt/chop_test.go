@@ -14,10 +14,3 @@ func TestChop(t *testing.T) {
 	e := 2 * time.Second
 	Chop(r, w, s, e)
 }
-
-func TestParseTime(t *testing.T) {
-	d, _ := parseTime("00:00:0,000")
-	if d != time.Duration(0) {
-		t.Errorf("parseTime(00:00:0,000) = %v, want 0s", d)
-	}
-}
